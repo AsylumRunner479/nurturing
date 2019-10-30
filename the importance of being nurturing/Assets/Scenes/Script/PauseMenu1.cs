@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu1 : MonoBehaviour
 {
     public static bool isPaused;//pause state that everything can see
     private GameObject _pauseMenu;
@@ -13,10 +13,10 @@ public class PauseMenu : MonoBehaviour
     private GameObject _pauseInitial;
     public Text _pauseTitle;
     // Reference
-    private CharacterController2D controller;
+    
     void Awake()//start of the game set the defaults
     {
-        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
+        
 
         _pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         _pauseButton = GameObject.FindGameObjectWithTag("PauseButoon");
@@ -31,14 +31,11 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Cancel") && !controller.IsDead) //press escape 
+        if (Input.GetButtonDown("Cancel")) //press escape 
         {
             TogglePause();//runs toggle pause function
         }
-        if (controller.IsDead)
-        {
-            DeathScreen();
-        }
+        
     }
     public void Start()
     {
