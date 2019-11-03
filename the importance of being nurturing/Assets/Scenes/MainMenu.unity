@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &467242323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1086994768079685302, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
+    type: 3}
+  m_PrefabInstance: {fileID: 1277739457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1277739457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,6 +129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086994769802489164, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1086994769802489160, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
         type: 3}
@@ -248,7 +259,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1277739459}
+      objectReference: {fileID: 1985486712}
     - target: {fileID: 1086994768589900763, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -262,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 1086994770183627022, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1086994770183627022, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
         type: 3}
@@ -274,27 +285,80 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1086994770183627022, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 467242323}
+    - target: {fileID: 1086994770183627022, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086994770183627022, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51b8744f9a7a0c4d9867f5fb99d2022, type: 3}
---- !u!1 &1277739458 stripped
+--- !u!1 &1532044724
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1086994769802489164, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
-    type: 3}
-  m_PrefabInstance: {fileID: 1277739457}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1277739459
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532044726}
+  - component: {fileID: 1532044725}
+  m_Layer: 0
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1532044725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277739458}
+  m_GameObject: {fileID: 1532044724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f867d99a28eb0a748ab2a6201b7e5edc, type: 3}
+  m_Script: {fileID: 11500000, guid: c69cc460eca5da742ae259fe90682b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pauseMenu: {fileID: 0}
+  text:
+  - how are you
+  - eugh been marking my students papers
+  - thought they were good students
+  - well the ones who turn up are...
+  - and when it comes to exams well you get all of them
+  - hahaha so what kind you talking
+  - well this one student Rabinovich turns up two hours late
+  - obviously hungover and struggling to stay awake
+  - and he hands in this paper about evolution
+  - where he says that plants can be taught to grow faster
+  index: 10
+  option: 1
+  showDlg: 1
+--- !u!4 &1532044726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532044724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 200.0167, y: 153.34706, z: 15.145264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1653032302
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +425,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1985486707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1086994768589900761, guid: e51b8744f9a7a0c4d9867f5fb99d2022,
+    type: 3}
+  m_PrefabInstance: {fileID: 1277739457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1985486712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985486707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f867d99a28eb0a748ab2a6201b7e5edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseMenu: {fileID: 467242323}
 --- !u!1 &2060017039
 GameObject:
   m_ObjectHideFlags: 0
